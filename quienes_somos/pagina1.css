@@ -1,0 +1,196 @@
+/* Reset de márgenes y paddings para todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para el body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f6f7f4; /* Color de fondo similar al de index.html */
+}
+
+/* Estilos para el header */
+header {
+    background-color: #380D06; /* Color de fondo del header */
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Estilo del logo */
+header .logo {
+    max-width: 120px; /* Reduce el tamaño del logo */
+    height: auto;
+    display: block; /* Asegura que el logo se mantenga en la parte superior izquierda */
+}
+
+/* Estilos para el icono del menú */
+.menu-icono {
+    width: 30px;
+    cursor: pointer;
+    display: none; /* Ocultamos el icono por defecto */
+}
+
+/* Menú desplegable en dispositivos móviles */
+#menu {
+    display: none; /* Ocultamos el checkbox por defecto */
+}
+
+#menu:checked ~ .menu {
+    display: block; /* Muestra el menú cuando se activa el checkbox */
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #003366; /* Fondo azul para el menú desplegable */
+}
+
+.menu .item {
+    margin: 0 15px;
+}
+
+.menu .item a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 0.5rem;
+    display: block;
+}
+
+.menu .item a:hover {
+    color: #ff2258; /* Color de hover */
+}
+
+/* Estilos para el menú desplegable */
+.menu-vertical {
+    list-style: none;
+    background-color: #003366; /* Fondo azul para el menú desplegable */
+    position: absolute;
+    top: 60px; /* Ajusta la posición para que quede justo debajo del header */
+    right: 0;
+    display: none; /* Ocultamos el menú desplegable por defecto */
+    width: 200px; /* Ajusta el ancho del menú desplegable */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para el menú desplegable */
+}
+
+.menu-vertical li {
+    margin: 0;
+}
+
+.menu-vertical a {
+    padding: 1rem;
+    color: white; /* Letras blancas en el menú desplegable */
+    text-decoration: none;
+    display: block;
+}
+
+.menu-vertical a:hover {
+    background-color: #575757; /* Color de hover para el menú vertical */
+}
+
+/* Mostrar menú en dispositivos móviles */
+#menu:checked ~ .menu-vertical {
+    display: block;
+}
+
+/* Estilos para el contenedor principal */
+#principal {
+    margin-top: 100px; /* Espacio debajo del header fijo */
+    text-align: center;
+}
+
+/* Estilos para el slider */
+.slider-frame {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slider-frame ul {
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: slide 10s infinite;
+}
+
+.slider-frame ul li {
+    width: 100%;
+    list-style: none;
+}
+
+.slider-frame ul li img {
+    width: 100%; /* Ajusta el tamaño de las imágenes en el slider */
+    height: auto;
+    object-fit: cover;
+}
+
+/* Animación para el slider */
+@keyframes slide {
+    0% { margin-left: 0; }
+    20% { margin-left: 0; }
+    25% { margin-left: -100%; }
+    45% { margin-left: -100%; }
+    50% { margin-left: -200%; }
+    70% { margin-left: -200%; }
+    75% { margin-left: -300%; }
+    95% { margin-left: -300%; }
+    100% { margin-left: 0; }
+}
+
+/* Estilos para las imágenes en otras secciones */
+img {
+    max-width: 100%; /* Ajusta el tamaño máximo de las imágenes */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Centra las imágenes dentro del contenedor */
+}
+
+/* Estilos para el footer */
+.footer {
+    background: linear-gradient(20deg, #380D06, #6D120F, #A5241B, #E23D34);
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: white;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer i {
+    margin-right: 10px;
+}
+
+/* Estilos para la sección de copyright */
+.copi {
+    text-align: center;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+}

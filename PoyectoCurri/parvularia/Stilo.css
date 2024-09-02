@@ -1,0 +1,521 @@
+* {
+    list-style: none;
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+
+body {
+    height: 145vh;
+
+    position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left:5%;
+    padding-right: 5%;
+    height: 100px;
+    background-color: #380D06;
+    z-index: 1000;
+    
+}
+
+
+.logo {
+    height: 50px;
+    
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item>a
+{
+    text-decoration: none;
+    color: white;
+}
+.item>a:hover
+{
+    text-decoration: none;
+    color: #ff2258;
+}
+.item {
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #f2f2f2;
+    margin-right: 1em; 
+    
+}
+
+.item:hover {
+    color: #ff2258;
+}
+
+#menu {
+    display: none;
+    
+}
+
+.menu-icono {
+    width: 25px;
+   
+}
+
+label {
+    cursor: pointer;
+    display: none;
+    margin-left: 5em;
+}
+@media (max-width: 991px) {
+    .menu {
+        padding: 30px;
+        margin: 0;
+    }
+
+    label {
+        display: initial;
+    }
+
+    .menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #233bb4;
+        display: none;
+    }
+
+    .item {
+        margin: 0 0 20px 0;
+        width: 100%;
+    }
+
+  
+
+    #menu:checked ~ .menu {
+        display: initial;
+    }    
+
+}
+.biblioteca{
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    text-decoration:none;
+    color:#FFFFFF;
+    
+    
+}
+.biblioteca,
+ul,
+li {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    padding: 0;
+    margin-right:1em;
+    
+}
+
+.biblioteca > ul {
+    display: none; /* Oculta la lista de libros por defecto */
+    position: absolute; /* Posiciona la lista de libros */
+    min-width: 90px; /* Ancho mínimo de la lista de libros */
+    
+}
+.biblioteca > ul > li {
+    float: none; /* Reinicia el comportamiento de float */
+    clear: both; /* Asegura que cada elemento de la lista de libros comience en una nueva línea */
+}
+
+.biblioteca > ul > li > a {
+    display: block; /* Hace que los enlaces ocupen todo el ancho disponible */
+    padding: 10px; /* Añade espaciado interno a los enlaces */
+    color: #fff; /* Color de texto blanco */
+}
+
+.biblioteca > ul > li > a:hover {
+    background-color: white; /* Cambia el color de fondo al pasar el ratón */
+    color: #29030e; /* Cambia el color de texto al pasar el ratón */
+}
+
+.biblioteca:hover > ul {
+    display: block; /* Muestra la lista de libros al pasar el mouse sobre #biblioteca */
+}
+
+.biblioteca {
+    position: relative; /* Establece posición relativa para poder posicionar la lista de libros */
+    cursor: pointer; /* Cambia el cursor al pasar sobre #biblioteca */
+}
+.biblioteca > ul > li > a {
+    display: block; /* Hace que los enlaces ocupen todo el ancho disponible */
+    padding: 10px; /* Añade espaciado interno a los enlaces */
+    color: #fff; /* Color de texto blanco */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+}
+nav{ 
+    max-width: 100%;
+    margin: auto;
+    background-color: #29030e;
+    font-size: 20px;
+    margin-top: 100px;
+    overflow: hidden;
+}
+.menu-horizontal{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+.menu-horizontal > li > a{
+    display: block;
+    padding: 15px 20px;
+    color: #e7e9f3;
+    text-decoration: none;
+}
+.menu-horizontal > li:hover{
+    background-color:red ;
+}
+.menu-vertical{
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+    background-color: rgb(243, 225, 225);
+}
+/*color de fondo*/
+.menu-horizontal li:hover .menu-vertical{
+    display: block;
+    background-color:#29030e;
+}
+/*color de fondo letras*/
+
+
+/* .menu-vertical li:hover{
+    background-color: rgb(255, 251, 0);
+    
+    ¡¡POR SI ACASO!!
+} */
+
+
+
+.menu-vertical  > li > a:hover {
+    background-color: yellow; /* Cambia el color de fondo al pasar el ratón */
+    color: #000000; /* Cambia el color de texto al pasar el ratón */
+}
+/*color de las letras*/
+.menu-vertical li a{
+    display: block;
+    color: rgb(255, 255, 255);
+    padding: 15px 15px 15px 20px;
+    text-decoration: none;
+}
+
+.contenedor img{
+    width: 100%;
+    height: auto; 
+    padding: 1%;
+}
+.contenedor p{
+    width: 100%;
+    height: auto; 
+    padding: 2%;
+    color: white;
+    background-color: #29030e;
+    font-size: 20px;
+    border-radius: 8px;
+}
+.main2 {
+    background:  #D4AF37;
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: 6px;  
+}
+
+.titulorojo{
+    background-color: #29030e;
+    color: white; 
+    margin: 1%;
+    text-align: center;
+}
+.imagenpar{
+    display: flex;
+    padding: 6px;  
+    width: 100%;
+    height: auto;
+}
+.imagenpar img{
+    display: flex;
+    padding: 6px;  
+    width: 50%;
+    height: auto;
+}
+.titutlopar>p{
+    padding-left: 1%;
+   
+}
+.titutlopar>h1{
+    padding-left: 1%;
+    color: red;
+
+}
+.noticias-destacadas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px auto;
+    background:  #3e503c;
+    width: 100%;
+    height: auto;
+    
+}
+.titulonoticia{  
+    background-color:#29030e;
+    text-align: center; /* Centra el contenido del div horizontalmente */
+    margin: 0 auto; /* Centra el div en la página */
+    width: 100%; /* Establece el ancho del div */
+    margin: 10px;
+    color: white;   
+}
+.contenedornoticia{
+    display: flex;
+    margin: 20px auto;
+    padding: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+   
+}
+.noticia {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.noticia img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+.main3 {
+    background: #130a7b;
+    width: 100%;
+    height: auto;
+}
+
+.titulonoticia2 {
+    background-color: #29030e;
+    text-align: center;
+    margin: 10px auto; /* Se cambió la propiedad margin por margin-top y margin-bottom */
+    width: 100%;
+    color: white;
+}
+
+.imagenpar2 {
+    display: flex;
+    justify-content: center; /* Se cambió padding por justify-content */
+    width: 100%;
+    height: auto;
+    margin: 20px auto; /* Se cambió la propiedad margin por margin-top y margin-bottom */
+}
+
+.imagenpar2 img {
+    width: 50%;
+    height: auto;
+}
+
+.titutlopar2 > h1 {
+    padding-left: 1%;
+    color: white;
+    background-color: #29030e;
+    margin: 1%;
+}
+.titutlopar2 > p {
+    padding-left: 1%;
+    color: white;
+    font-size: 30px;
+    margin: 20px ;
+   
+}
+.duraciona{
+    background-color: #d56d04;
+    width: 390px;
+    height: 100px;
+    padding-top: 35px;
+    padding-left: 30px;
+    margin: 110px;
+}
+.main4 img{
+    width: 100%;
+    height: auto;
+}
+.asignaturas{
+    background-color: #29030e;
+    text-align: center; /* Centra el contenido del div horizontalmente */
+    margin: 0 auto; /* Centra el div en la página */
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.main5 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px auto;
+   
+}
+.tituloventaja{
+    background-color: #29030e;
+    text-align: center;
+    margin: 10px auto; /* Se cambió la propiedad margin por margin-top y margin-bottom */
+    width: 100%;
+    color: white;
+}
+
+.ventajasmain{
+   
+
+    display: flex;
+    margin: 20px auto;
+    padding: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.noticia {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    background-color: #fceaea;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.noticia img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.noticia h2 {
+    font-size: 1.5rem;
+    padding: 10px;
+}
+
+.noticia p {
+    padding: 10px;
+    color: #333;
+}
+
+.footer{
+    display: flex;   
+    background: linear-gradient(20deg, #380D06, #6D120F, #A5241B, #E23D34);
+    width: 100%;
+    height: auto;
+}
+.footer,#izquierda{
+    font-size: 1.2vw;  
+}
+#izquierda a {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* opcional: quita el subrayado de los enlaces */
+    margin-bottom: 2px; /* opcional: añade un espacio entre cada enlace */
+    padding-left: 30%;
+  }
+  
+  #izquierda a i {
+    margin-right: 10px; /* opcional: añade espacio entre el icono y el texto */
+  }
+  
+  #izquierda p {
+    margin: 0; /* opcional: quita el espacio alrededor del párrafo */
+  }
+  #derecha a {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* opcional: quita el subrayado de los enlaces */
+    margin-bottom: 2px; /* opcional: añade un espacio entre cada enlace */
+    padding-left: 30%;
+  }
+  
+  #derecha a i {
+    margin-right: 10px; /* opcional: añade espacio entre el icono y el texto */
+  }
+  
+  #derecha p {
+    margin: 0; /* opcional: quita el espacio alrededor del párrafo */
+  }
+
+  .footer p, #izquierda strong {
+    font-size: 1.2vw;   
+}
+.footer p, #derechas strong {
+    font-size: 1.2vw;   
+}
+.button {
+    text-decoration: none;
+    color: #F7BF10;
+}
+
+#izquierda{
+    
+    width: 50%;
+    height: auto;
+    text-align: center;
+    padding-bottom: 2em;
+}
+#derecha{   
+    width: 70%;
+    height: auto;
+    text-align: center;
+    padding-bottom: 2em;
+}
+
+.facebook{
+    color: rgb(226, 230, 2);
+   font-size: 30px;
+    
+}
+
+.whatsapp{
+    color: rgb(2, 74, 3);
+    font-size: 30px;
+    
+}
+.instagram{
+    color: red;
+    font-size: 30px;
+}
+.tiktok{
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+}
+.ubicacion{
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+}
+.copi {
+    color: #000000; /* Cambia el color del texto */
+    font-size: 20px; /* Cambia el tamaño del texto */
+    text-align: center; /* Centra el texto */
+    font-family: Arial, Helvetica, sans-serif;
+  }

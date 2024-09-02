@@ -1,0 +1,299 @@
+* {
+    list-style: none;
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+
+body {
+    height: 145vh;
+
+    position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left:5%;
+    padding-right: 5%;
+    height: 100px;
+    background-color: #380D06;
+    z-index: 1000;
+    
+}
+
+
+.logo {
+    height: 50px;
+    
+
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #f2f2f2;
+    margin-right: 1em; 
+    
+}
+
+.item:hover {
+    color: #ff2258;
+}
+
+#menu {
+    display: none;
+    
+}
+
+.menu-icono {
+    width: 25px;
+   
+}
+
+label {
+    cursor: pointer;
+    display: none;
+    margin-left: 5em;
+}
+
+
+
+
+
+@media (max-width: 991px) {
+    .menu {
+        padding: 30px;
+        margin: 0;
+    }
+
+    label {
+        display: initial;
+    }
+
+    .menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #102b96;
+        display: none;
+    }
+
+    .item {
+        margin: 0 0 20px 0;
+        width: 100%;
+    }
+
+  
+
+    #menu:checked ~ .menu {
+        display: initial;
+    }    
+
+}
+
+
+
+.biblioteca{
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    text-decoration:none;
+    color:#FFFFFF;
+    
+    
+}
+.biblioteca,
+ul,
+li {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    padding: 0;
+    margin-right:1em;
+    
+}
+
+ul,
+li {
+    
+    text-decoration: none;
+    display: block;
+}
+
+.biblioteca > ul {
+    display: none; /* Oculta la lista de libros por defecto */
+    position: absolute; /* Posiciona la lista de libros */
+    min-width: 90px; /* Ancho mínimo de la lista de libros */
+    
+}
+.biblioteca > ul > li {
+    float: none; /* Reinicia el comportamiento de float */
+    clear: both; /* Asegura que cada elemento de la lista de libros comience en una nueva línea */
+}
+
+.biblioteca > ul > li > a {
+    display: block; /* Hace que los enlaces ocupen todo el ancho disponible */
+    padding: 10px; /* Añade espaciado interno a los enlaces */
+    color: #fff; /* Color de texto blanco */
+}
+
+.biblioteca > ul > li > a:hover {
+    background-color: white; /* Cambia el color de fondo al pasar el ratón */
+    color: #232903; /* Cambia el color de texto al pasar el ratón */
+}
+
+.biblioteca:hover > ul {
+    display: block; 
+    /* Muestra la lista de libros al pasar el mouse sobre #biblioteca */
+    background-color: #eb2c2c;
+}
+
+.biblioteca {
+    position: relative; /* Establece posición relativa para poder posicionar la lista de libros */
+    cursor: pointer; /* Cambia el cursor al pasar sobre #biblioteca */
+}
+.biblioteca > ul > li > a {
+    display: block; /* Hace que los enlaces ocupen todo el ancho disponible */
+    padding: 10px; /* Añade espaciado interno a los enlaces */
+    color: #fff; /* Color de texto blanco */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+}
+nav{ 
+    max-width: 100%;
+    margin: auto;
+    background-color: #29030e;
+    font-size: 20px;
+    margin-top: 100px;
+    overflow: hidden;
+}
+.menu-horizontal{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+.menu-horizontal > li > a{
+    display: block;
+    padding: 15px 20px;
+    color: #e7e9f3;
+    text-decoration: none;
+}
+.menu-horizontal > li:hover{
+    background-color:red ;
+}
+.menu-vertical{
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+    background-color: rgb(243, 225, 225);
+}
+/*color de fondo*/
+.menu-horizontal li:hover .menu-vertical{
+    display: block;
+    background-color:#29030e;
+}
+/*color de fondo letras*/
+
+
+/* .menu-vertical li:hover{
+    background-color: rgb(255, 251, 0);
+    
+    ¡¡POR SI ACASO!!
+} */
+
+
+
+.menu-vertical  > li > a:hover {
+    background-color: yellow; /* Cambia el color de fondo al pasar el ratón */
+    color: #000000; /* Cambia el color de texto al pasar el ratón */
+}
+/*color de las letras*/
+.menu-vertical li a{
+    display: block;
+    color: rgb(255, 255, 255);
+    padding: 15px 15px 15px 20px;
+    text-decoration: none;
+}
+.main{
+    
+    width: 100%;
+    height: auto;
+}
+.footer{
+    display: flex;
+    background: #6D120F;
+    width: 100%;
+    height: 150px;
+}
+
+#izquierda{
+    
+    width: 50%;
+    height: 100px;
+    text-align: center;
+}
+#derecha{
+    
+    width: 70%;
+    height: 100px;
+    text-align: center;
+}
+
+.noticias-destacadas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.noticia {
+    width: calc(100% - 20px);
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.noticia img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.noticia h2 {
+    font-size: 1.5rem;
+    padding: 10px;
+}
+
+.noticia p {
+    padding: 10px;
+    color: #000;
+}
+
+
+
+
+
+
